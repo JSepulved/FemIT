@@ -52,7 +52,7 @@ public class ContactoController {
         return contactoService.findAllContactoByNombreAsc();
     }
 
-    @GetMapping("/contacto/findallbynombreasc")
+    @GetMapping("/contacto/findallbynombredesc")
     public List<Contacto> findAllByNombreDesc(){
         return contactoService.findAllContactoByNombreDesc();
     }

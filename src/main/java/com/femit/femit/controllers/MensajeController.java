@@ -51,7 +51,7 @@ public class MensajeController {
         return mensajeService.findAllMensajeByNombreAsc();
     }
 
-    @GetMapping("/mensaje/findallbynombreasc")
+    @GetMapping("/mensaje/findallbynombredesc")
     public List<Mensaje> findAllByNombreDesc(){
         return mensajeService.findAllMensajeByNombreDesc();
     }
