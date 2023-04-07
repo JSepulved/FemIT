@@ -22,14 +22,14 @@ public class Usuaria {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_usuario;
     private String nombre;
-    private String apellido;
+    private String apellidos;
     private LocalDate fecha_nacimiento;
     private String correo_electronico;
     private String contrasena;
     private String foto_portada;
     private String foto_perfil;
     private String cargo;
-    private String estudio;
+    private String estudios;
     private Boolean buscando_empleo;
     private String curriculum;
     private String links;
