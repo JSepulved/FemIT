@@ -21,4 +21,7 @@ public class PublicacionReaccion {
     private Integer id_publicacionReaccion;
     private Integer id_publicacion;
     private Integer id_reaccion;
+    
+   
 }
+

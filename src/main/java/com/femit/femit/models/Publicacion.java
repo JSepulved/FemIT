@@ -26,7 +26,8 @@ public class Publicacion {
     private LocalDateTime fecha_hora_publicacion;
     private String contenido_publicacion;
     private Integer id_empresa;
-
-
+    
+    
+    
     
 }

@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,6 +20,12 @@ public class ComentarioReaccion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_comentarioReaccion;
-    private Integer id_comentario;
-    private Integer id_reaccion;
+    
+    @ManyToOne
+    private Comentario comentario;
+    
+    @ManyToOne
+    private Reaccion reaccion;
+    
+    
 }
