@@ -11,9 +11,9 @@ import com.femit.femit.models.Publicacion;
 
 public interface PublicacionRepository extends JpaRepository<Publicacion, Integer> {
 
-    @Query(value = "SELECT p FROM Publicacion p WHERE p.usuario.id_usuario = ?1")
-    List<Publicacion> findPublicacionByUserId(Integer idUsuario);
+  @Query( value = " SELECT * FROM publicacion ORDER BY fecha_hora_publicacion ASC", nativeQuery = true)
+  List<Publicacion> findAllPublicacionByFechaHoraAsc();
 
-    @Query(value = "SELECT p FROM Publicacion p WHERE p.empresa.id_empresa = ?1")
-    List<Publicacion> findPublicacionByEmpresaId(Integer idEmpresa);
+  @Query( value = " SELECT * FROM publicacion ORDER BY fecha_hora_publicacion DESC", nativeQuery = true)
+  List<Publicacion> findAllPublicacionByFechaHoraDesc();
 }

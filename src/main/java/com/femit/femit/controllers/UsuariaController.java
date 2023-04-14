@@ -27,12 +27,12 @@ public class UsuariaController {
   }
 
   @PostMapping("/usuaria/save")
-  public void saveEmpresa(@RequestBody Usuaria usuaria){
+  public void saveUsuaria(@RequestBody Usuaria usuaria){
     usuariaService.saveUsuaria(usuaria);
   }
 
   @PutMapping("/usuaria/update")
-  public void updateEmpresa(@RequestBody Usuaria usuaria){
+  public void updateUsuaria(@RequestBody Usuaria usuaria){
     usuariaService.updateUsuaria(usuaria);
   }
 

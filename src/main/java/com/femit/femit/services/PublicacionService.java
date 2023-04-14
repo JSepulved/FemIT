@@ -31,18 +31,18 @@ public class PublicacionService {
     }
 
     public List<Publicacion> findAll() {
-        return this.publicacionRepository.findAll();
+        return publicacionRepository.findAll();
     }
 
     public Publicacion findById(Integer id) {
-        return this.publicacionRepository.findById(id).orElse(null);
+        return publicacionRepository.findById(id).orElse(null);
     }
 
-    public List<Publicacion> findPublicacionByUserId(Integer idUsuario) {
-        return this.publicacionRepository.findPublicacionByUserId(idUsuario);
+    public List<Publicacion> findAllPublicacionByFechaHoraAsc() {
+        return publicacionRepository.findAllPublicacionByFechaHoraAsc();
     }
 
-    public List<Publicacion> findPublicacionByEmpresaId(Integer idEmpresa) {
-        return this.publicacionRepository.findPublicacionByEmpresaId(idEmpresa);
+    public List<Publicacion> findAllPublicacionByFechaHoraDesc() {
+        return publicacionRepository.findAllPublicacionByFechaHoraDesc();
     }
 }

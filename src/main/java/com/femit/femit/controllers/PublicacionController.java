@@ -27,20 +27,15 @@ public class PublicacionController {
         this.publicacionService = publicacionService;
     }
 
+
     @PostMapping("/publicacion/save")
     public void savePublicacion(@RequestBody Publicacion publicacion) {
-        publicacion.setFecha_hora_publicacion(LocalDateTime.now());
         publicacionService.savePublicacion(publicacion);
     }
 
-    @PutMapping("/publicacion/update/{id}")
-    public void updatePublicacion(@PathVariable Integer id, @RequestBody Publicacion publicacion) {
-        Publicacion oldPublicacion = publicacionService.findById(id);
-        if (oldPublicacion != null) {
-            publicacion.setId_publicacion(id);
-            publicacion.setFecha_hora_publicacion(oldPublicacion.getFecha_hora_publicacion());
-            publicacionService.updatePublicacion(publicacion);
-        }
+    @PutMapping("/publicacion/update")
+    public void updatePublicacion(@RequestBody Publicacion publicacion) {
+      publicacionService.updatePublicacion(publicacion);    
     }
 
     @DeleteMapping("/publicacion/delete/{id}")
@@ -58,13 +53,22 @@ public class PublicacionController {
         return publicacionService.findById(id);
     }
 
-    @GetMapping("/publicacion/findbyuserid/{idUsuario}")
-    public List<Publicacion> findPublicacionByUserId(@PathVariable Integer idUsuario) {
-        return publicacionService.findPublicacionByUserId(idUsuario);
+    @GetMapping("/publicacion/findallpublicacionbyfechahoraasc")
+    public List<Publicacion> findAllPublicacionByFechaHoraAsc() {
+        return publicacionService.findAllPublicacionByFechaHoraAsc();
     }
 
-    @GetMapping("/publicacion/findbyempresaid/{idEmpresa}")
-    public List<Publicacion> findPublicacionByEmpresaId(@PathVariable Integer idEmpresa) {
-        return publicacionService.findPublicacionByEmpresaId(idEmpresa);
+    @GetMapping("/publicacion/findallpublicacionbyfechahoradesc")
+    public List<Publicacion> findAllPublicacionByFechaHoraDesc() {
+        return publicacionService.findAllPublicacionByFechaHoraDesc();
     }
+
+
+  
+
+  
+
+  
+
+  
 }

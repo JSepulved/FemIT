@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.femit.femit.models.PublicacionReaccion;
 
 public interface PublicacionReaccionRepository extends JpaRepository<PublicacionReaccion, Integer> {
-    List<PublicacionReaccion> findByPublicacionId(Integer publicacionId);
+    // List<PublicacionReaccion> findByPublicacionId(Integer publicacionId);
 }

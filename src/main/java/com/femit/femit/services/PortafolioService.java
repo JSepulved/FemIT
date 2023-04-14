@@ -30,15 +30,15 @@ public class PortafolioService {
         this.portafolioRepository.deleteById(id);
     }
     
-    public List<Portafolio> findAllPortafolio() {
-        return this.portafolioRepository.findAll();
+    public List<Portafolio> findAll() {
+        return portafolioRepository.findAll();
     }
     
-    public List<Portafolio> findAllPortafolioByNombreAsc() {
-        return this.portafolioRepository.findAllPortafolioByNombreAsc();
+    public List<Portafolio> findAllPortafolioByIdUsuarioAsc() {
+        return portafolioRepository.findAllPortafolioByIdUsuarioAsc();
     }
     
-    public List<Portafolio> findAllPortafolioByNombreDesc() {
-        return this.portafolioRepository.findAllPortafolioByNombreDesc();
+    public List<Portafolio> findAllPortafolioByIdUsuarioDesc() {
+        return portafolioRepository.findAllPortafolioByIdUsuarioDesc();
     }
 }

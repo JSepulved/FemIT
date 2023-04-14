@@ -43,17 +43,17 @@ public class PortafolioController {
     }
 
     @GetMapping("/portafolio/findall")
-    public List<Portafolio> findAllPortafolio(){
-        return portafolioService.findAllPortafolio();
+    public List<Portafolio> findAll(){
+        return portafolioService.findAll();
     }
 
-    @GetMapping("/portafolio/findallportafoliobynameasc")
-    public List<Portafolio> findAllPortafolioByNombreAsc(){
-        return portafolioService.findAllPortafolioByNombreAsc();
+    @GetMapping("/portafolio/findallportafoliobyidusuarioasc")
+    public List<Portafolio> findAllPortafolioByIdUsuarioAsc(){
+        return portafolioService.findAllPortafolioByIdUsuarioAsc();
     }
 
-    @GetMapping("/portafolio/findallportafoliobynombredesc")
-    public List<Portafolio> findAllPortafolioByNombreDesc(){
-        return portafolioService.findAllPortafolioByNombreDesc();
+    @GetMapping("/portafolio/findallportafoliobyidusuariodesc")
+    public List<Portafolio> findAllPortafolioByIdUsuarioDesc(){
+        return portafolioService.findAllPortafolioByIdUsuarioDesc();
     }
 }

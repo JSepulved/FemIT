@@ -31,9 +31,9 @@ public class PublicacionReaccionController {
         publicacionReaccionService.savePublicacionReaccion(publicacionReaccion);
     }
 
-    @PutMapping("/publicacionreaccion/save")
+    @PutMapping("/publicacionreaccion/update")
     public void updatePublicacionReaccion(@RequestBody PublicacionReaccion publicacionReaccion){
-        publicacionReaccionService.savePublicacionReaccion(publicacionReaccion);
+        publicacionReaccionService.updatePublicacionReaccion(publicacionReaccion);
     }
 
     @DeleteMapping("/publicacionreaccion/delete/{id}")

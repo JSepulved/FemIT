@@ -9,10 +9,10 @@ import com.femit.femit.models.Portafolio;
 
 public interface PortafolioRepository extends JpaRepository<Portafolio, Integer> {
 
-    @Query("SELECT p FROM Portafolio p ORDER BY p.nombre ASC")
-    List<Portafolio> findAllPortafolioByNombreAsc();
+    @Query(value = "SELECT * FROM Portafolio ORDER BY id_usuario ASC", nativeQuery = true)
+    List<Portafolio> findAllPortafolioByIdUsuarioAsc();
     
-    @Query("SELECT p FROM Portafolio p ORDER BY p.nombre DESC")
-    List<Portafolio> findAllPortafolioByNombreDesc();
+    @Query( value = "SELECT * FROM Portafolio ORDER BY id_usuario DESC", nativeQuery = true)
+    List<Portafolio> findAllPortafolioByIdUsuarioDesc();
     
 }

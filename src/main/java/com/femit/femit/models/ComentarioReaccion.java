@@ -21,11 +21,11 @@ public class ComentarioReaccion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_comentarioReaccion;
     
-    @ManyToOne
-    private Comentario comentario;
+    // @ManyToOne
+    private Integer id_comentario;
     
-    @ManyToOne
-    private Reaccion reaccion;
+    // @ManyToOne
+    private Integer id_reaccion;
     
     
 }

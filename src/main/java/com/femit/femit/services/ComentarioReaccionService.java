@@ -21,15 +21,17 @@ public class ComentarioReaccionService {
         this.comentarioReaccionRepository.save(comentarioReaccion);
     }
 
+    public ComentarioReaccion updateComentarioReaccion(ComentarioReaccion comentarioReaccion){
+        return comentarioReaccionRepository.save(comentarioReaccion);
+    }
+
     public void deleteComentarioReaccionById(Integer id){
         this.comentarioReaccionRepository.deleteById(id);
     }
 
-    public List<ComentarioReaccion> findAllComentarioReacciones(){
+    public List<ComentarioReaccion> findAll(){
         return comentarioReaccionRepository.findAll();
     }
 
-    public ComentarioReaccion updateComentarioReaccion(ComentarioReaccion comentarioReaccion){
-        return comentarioReaccionRepository.save(comentarioReaccion);
-    }
+    
 }

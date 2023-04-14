@@ -32,9 +32,9 @@ public class ComentarioReaccionController {
         comentarioReaccionService.saveComentarioReaccion(comentarioReaccion);
     }
 
-    @PutMapping("/comentarioreaccion/save")
+    @PutMapping("/comentarioreaccion/update")
     public void updateComentarioReaccion(@RequestBody ComentarioReaccion comentarioReaccion){
-        comentarioReaccionService.saveComentarioReaccion(comentarioReaccion);
+        comentarioReaccionService.updateComentarioReaccion(comentarioReaccion);
     }
 
     @DeleteMapping("/comentarioreaccion/delete/{id}")
@@ -43,7 +43,7 @@ public class ComentarioReaccionController {
     }
 
     @GetMapping("/comentarioreaccion/findall")
-    public List<ComentarioReaccion> findAllComentarioReacciones(){
-        return comentarioReaccionService.findAllComentarioReacciones();
+    public List<ComentarioReaccion> findAll(){
+        return comentarioReaccionService.findAll();
     }
 }

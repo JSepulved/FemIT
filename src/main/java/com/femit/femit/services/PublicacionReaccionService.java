@@ -18,19 +18,23 @@ public class PublicacionReaccionService {
     }
 
     public void savePublicacionReaccion(PublicacionReaccion publicacionReaccion) {
-        publicacionReaccionRepository.save(publicacionReaccion);
+        this.publicacionReaccionRepository.save(publicacionReaccion);
+    }
+
+    public void updatePublicacionReaccion(PublicacionReaccion publicacionReaccion) {
+        this.publicacionReaccionRepository.save(publicacionReaccion);
     }
 
     public void deleteById(Integer id) {
-        publicacionReaccionRepository.deleteById(id);
+        this.publicacionReaccionRepository.deleteById(id);
     }
 
     public List<PublicacionReaccion> findAll() {
         return publicacionReaccionRepository.findAll();
     }
 
-    public List<PublicacionReaccion> findByPublicacionId(Integer publicacionId) {
-        return publicacionReaccionRepository.findByPublicacionId(publicacionId);
-    }
+    // public List<PublicacionReaccion> findByPublicacionId(Integer publicacionId) {
+    //     return publicacionReaccionRepository.findByPublicacionId(publicacionId);
+    // }
     
 }
